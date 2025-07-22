@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mastermind Simulator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>Configure Mastermind Simulation</h1>
+  <form method="POST">
+    <label>Number of Colors:</label>
+    <select name="num_colors">
+      {% for n in [5,6,7,8] %}
+        <option value="{{ n }}">{{ n }}</option>
+      {% endfor %}
+    </select>
+
+    <label>Code Length:</label>
+    <select name="code_length">
+      {% for m in [3,4,5] %}
+        <option value="{{ m }}">{{ m }}</option>
+      {% endfor %}
+    </select>
+
+    <label>Allow Repetition:</label>
+    <input type="radio" name="allow_repeats" value="yes" checked> Yes
+    <input type="radio" name="allow_repeats" value="no"> No
+
+    <label>Game Mode:</label>
+    <select name="mode">
+      <option value="standard">Standard</option>
+      <option value="beginner">Beginner</option>
+    </select>
+
+    <label>Number of Simulations:</label>
+    <input type="number" name="num_simulations" min="1" value="1000">
+
+    <button type="submit">Run Simulation</button>
+  </form>
+</body>
+</html>

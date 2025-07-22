@@ -1,0 +1,5 @@
+name: mastermindenv
+dependencies:
+  - python=3.10
+  - flask
+  - numpy

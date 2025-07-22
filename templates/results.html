@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulation Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>Simulation Results</h1>
+
+  <ul>
+    <li><strong>Average Attempts:</strong> {{ stats.avg }}</li>
+    <li><strong>Standard Deviation:</strong> {{ stats.std }}</li>
+    <li><strong>Max Attempts:</strong> {{ stats.max }}</li>
+  </ul>
+
+  <a href="/">Run Another Simulation</a>
+</body>
+</html>
